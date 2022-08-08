@@ -1,0 +1,185 @@
+@import "bootstrap/bootstrap";
+@import "Ginkgo";
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+
+    display: inline-block;
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+    color: rgba(90, 90, 90, 1);
+
+    font-size: medium;
+    text-align: center;
+    font-family: "微軟正黑體", "Open sans", "Helvetica Neue", HelveticaNeue,
+        Helvetica, Arial, sans-serif;
+	
+    // 文字染色，背景色、文字色
+    @include selection(rgba(120, 186, 255, 1), rgba(255, 255, 255, 1));
+}
+
+.wrapper {
+	
+	.header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 2rem;
+
+		.logo {
+			display: flex;
+			justify-content: flex-start;
+		}
+
+		.menu {
+			width: 30%;
+			ul {
+				display: flex;
+				justify-content: flex-end;
+				padding-left: 0;
+				list-style: none;
+
+
+				li {
+					> a {
+						color: #56cde9;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+
+	.seascape {
+		position: relative;
+		background-size: cover;
+		width: 100vw;
+		height: 100vh;
+
+		&.bg_top {
+			background-image: url(../img/index-bgPC-top.png);
+		}
+
+		&.bg_mid {
+			background-image: url(../img/index-bgPC-mid.png);
+		}
+
+		&.bg_bottom {
+			background-image: url(../img/index-bgPC-bottom.png);
+		}
+
+		.ice {
+			&.ice_top {
+				position: absolute;
+				bottom: 0;
+			}
+		}
+	}
+
+	.side_nav {
+		position: fixed;
+		top: calc(50% - 200px / 2);
+		right: 2rem;
+
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+
+			> li {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				cursor: pointer;
+
+				&:nth-of-type(2) {
+					margin: 25px 0;
+				}
+
+				&:hover {
+					border: 1px solid #cbecf1;
+
+					> a {
+						width: 10px;
+						height: 10px;
+					}
+				}
+
+				> a {
+					width: 5px;
+					height: 5px;
+					border-radius: 50%;
+					background-color: #1875b6;
+				}
+			}
+		}
+	}
+
+	.submarine {
+		position: fixed;
+		right: 10%;
+		bottom: 11%;
+
+		&.submarine_down {
+			animation-name: submarine_down;
+			animation-duration: 2s;
+			animation-fill-mode: both;
+		}
+
+		&.submarine_up {
+			opacity: 0;
+			animation-name: submarine_up;
+			animation-duration: 2s;
+			animation-fill-mode: both;
+		}
+
+		@keyframes submarine_up {
+			form {
+				opacity: 0;
+			}
+
+			to {
+				opacity: 1;
+			}
+
+		}
+
+		@keyframes submarine_down {
+			25% {
+				transform: rotate(-20deg);
+
+			}
+
+			50% {
+				transform: rotate(-30deg);
+				// transform: translateX(100px);
+				transform: translateY(100px);
+			}
+
+			75% {
+				transform: rotate(-40deg);
+				transform: translateX(150px);
+				transform: translateY(150px);	
+			}
+
+			100% {
+				transform: rotate(-50deg);
+				transform: translateX(200px);
+				transform: translateY(200px);
+				opacity: 0;
+			}
+
+
+		}
+
+		
+	}
+}
