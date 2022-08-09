@@ -11,7 +11,7 @@ $(function() {
 
 		
 
-		$('html, body').delay(3000).animate({
+		$('html, body').delay(1000).animate({
 			scrollTop: $(target).offset().top
 		}, function() {
 			$('.submarine').delay(500).queue(function(){

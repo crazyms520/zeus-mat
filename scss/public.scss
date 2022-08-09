@@ -2,6 +2,7 @@
 @import "Ginkgo";
 html {
 	scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 
 body {
@@ -18,18 +19,25 @@ body {
     text-align: center;
     font-family: "微軟正黑體", "Open sans", "Helvetica Neue", HelveticaNeue,
         Helvetica, Arial, sans-serif;
-	
+		
     // 文字染色，背景色、文字色
     @include selection(rgba(120, 186, 255, 1), rgba(255, 255, 255, 1));
 }
 
 .wrapper {
+	position: relative;
 	
 	.header {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding-top: 2rem;
+		position: absolute;
+		top: 2rem;
+		left: calc(50% - 1320px / 2);
+		width: 100%;
+		max-width: 1320px;
+
+		// padding-top: 2rem;
 
 		.logo {
 			display: flex;
@@ -57,26 +65,40 @@ body {
 
 	.seascape {
 		position: relative;
-		background-size: cover;
-		width: 100vw;
-		height: 100vh;
+		// background-size: cover;
+		// background-repeat: no-repeat;
+		// width: 100vw;
+		// height: 100vh;
 
-		&.bg_top {
-			background-image: url(../img/index-bgPC-top.png);
-		}
+		// &.bg_top {
+		// 	background-image: url(../img/bg01.jpg);
+		// 	background-position: bottom;
+		// }
 
-		&.bg_mid {
-			background-image: url(../img/index-bgPC-mid.png);
-		}
+		// &.bg_mid {
+		// 	background-image: url(../img/bg02.jpg);
+		// 	background-position: bottom;
+		// }
 
-		&.bg_bottom {
-			background-image: url(../img/index-bgPC-bottom.png);
-		}
+		// &.bg_bottom {
+		// 	background-image: url(../img/bg03.jpg);
+		// 	background-position:bottom;
+		// }
 
 		.ice {
+			> picture {
+				display: inline-block;
+				width: 100vw;
+				height: 100vh;
+
+				> img {
+					width: 100vw;
+					height: 100vh;
+				}
+			}
 			&.ice_top {
-				position: absolute;
-				bottom: 0;
+				// position: absolute;
+				// bottom: 0;
 			}
 		}
 	}

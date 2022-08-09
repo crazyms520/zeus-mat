@@ -3088,22 +3088,21 @@ textarea.form-control-lg { min-height: calc(1.5em + 1rem + 2px); }
   .d-print-none { display: none !important; } }
 *, *:after, *:before { vertical-align: top; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -moz-osx-font-smoothing: subpixel-antialiased; -webkit-font-smoothing: subpixel-antialiased; -moz-font-smoothing: subpixel-antialiased; -ms-font-smoothing: subpixel-antialiased; -o-font-smoothing: subpixel-antialiased; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body { position: relative; display: inline-block; width: 100%; margin: 0; padding: 0; color: #5a5a5a; font-size: medium; text-align: center; font-family: "微軟正黑體", "Open sans", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif; }
 body::-moz-selection { color: white; background-color: #78baff; }
 body::selection { color: white; background-color: #78baff; }
 
-.wrapper .header { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; }
+.wrapper { position: relative; }
+.wrapper .header { display: flex; justify-content: space-between; align-items: center; position: absolute; top: 2rem; left: calc(50% - 1320px / 2); width: 100%; max-width: 1320px; }
 .wrapper .header .logo { display: flex; justify-content: flex-start; }
 .wrapper .header .menu { width: 30%; }
 .wrapper .header .menu ul { display: flex; justify-content: flex-end; padding-left: 0; list-style: none; }
 .wrapper .header .menu ul li > a { color: #56cde9; text-decoration: none; }
-.wrapper .seascape { position: relative; background-size: cover; width: 100vw; height: 100vh; }
-.wrapper .seascape.bg_top { background-image: url(../img/index-bgPC-top.png); }
-.wrapper .seascape.bg_mid { background-image: url(../img/index-bgPC-mid.png); }
-.wrapper .seascape.bg_bottom { background-image: url(../img/index-bgPC-bottom.png); }
-.wrapper .seascape .ice.ice_top { position: absolute; bottom: 0; }
+.wrapper .seascape { position: relative; }
+.wrapper .seascape .ice > picture { display: inline-block; width: 100vw; height: 100vh; }
+.wrapper .seascape .ice > picture > img { width: 100vw; height: 100vh; }
 .wrapper .side_nav { position: fixed; top: calc(50% - 200px / 2); right: 2rem; }
 .wrapper .side_nav ul { margin: 0; padding: 0; list-style: none; }
 .wrapper .side_nav ul > li { display: flex; justify-content: center; align-items: center; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; }
