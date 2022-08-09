@@ -3108,6 +3108,52 @@ body::selection { color: white; background-color: #78baff; }
 .wrapper .seascape .ice-icon-items .ice-icon-item.fade_in { opacity: 0; animation-name: fade_in; animation-duration: 2s; animation-fill-mode: both; }
 @keyframes fade_in { form { opacity: 0; }
   to { opacity: 1; } }
+.wrapper .seascape .bubble { position: absolute; top: 0; left: 0; }
+.wrapper .seascape .bubble.b1 { top: 50%; left: 10%; }
+.wrapper .seascape .bubble.b1 > li { animation: bubble-b1 15s linear infinite; }
+.wrapper .seascape .bubble.b1 > li:nth-of-type(1) { width: 5px; height: 5px; top: 20px; left: 0; }
+.wrapper .seascape .bubble.b1 > li:nth-of-type(2) { width: 10px; height: 10px; top: 0; left: 20px; animation-duration: 13s; animation-delay: 2s; }
+.wrapper .seascape .bubble.b1 > li:nth-of-type(3) { width: 15px; height: 15px; top: 30px; left: 10px; animation-duration: 18s; animation-delay: 3.5s; }
+.wrapper .seascape .bubble.b1 > li:nth-of-type(4) { width: 18px; height: 18px; top: -30px; left: 0; animation-duration: 23s; animation-delay: 1.5s; }
+.wrapper .seascape .bubble.b1 > li:nth-of-type(5) { width: 20px; height: 20px; top: 15px; left: 40px; animation-duration: 16s; animation-delay: 2s; }
+.wrapper .seascape .bubble.b2 { top: 70%; left: 80%; }
+.wrapper .seascape .bubble.b2 > li { animation: bubble-b1 20s linear infinite; }
+.wrapper .seascape .bubble.b2 > li:nth-of-type(1) { width: 20px; height: 20px; top: 10px; left: 0; animation-delay: 2s; }
+.wrapper .seascape .bubble.b2 > li:nth-of-type(2) { width: 18px; height: 18px; top: 20px; left: 20px; animation-duration: 13s; animation-delay: .5s; }
+.wrapper .seascape .bubble.b2 > li:nth-of-type(3) { width: 10px; height: 10px; top: 0; left: 15px; animation-duration: 18s; animation-delay: 3.5s; }
+.wrapper .seascape .bubble.b2 > li:nth-of-type(4) { width: 15px; height: 15px; top: -20px; left: 30px; animation-duration: 23s; animation-delay: 1.5s; }
+.wrapper .seascape .bubble.b2 > li:nth-of-type(5) { width: 5px; height: 5px; top: 15px; left: 40px; animation-duration: 16s; }
+.wrapper .seascape .bubble.b3 { top: 70%; left: 15%; }
+.wrapper .seascape .bubble.b3 > li { animation: bubble-b1 13s linear infinite; }
+.wrapper .seascape .bubble.b3 > li:nth-of-type(1) { width: 10px; height: 10px; top: 10px; left: 0; animation-delay: 2.5s; }
+.wrapper .seascape .bubble.b3 > li:nth-of-type(2) { width: 15px; height: 15px; top: 20px; left: 20px; animation-duration: 13s; animation-delay: 2s; }
+.wrapper .seascape .bubble.b3 > li:nth-of-type(3) { width: 5px; height: 5px; top: 0; left: 15px; animation-duration: 18s; animation-delay: 1s; }
+.wrapper .seascape .bubble.b3 > li:nth-of-type(4) { width: 18px; height: 18px; top: -20px; left: 30px; animation-duration: 23s; }
+.wrapper .seascape .bubble.b3 > li:nth-of-type(5) { width: 20px; height: 20px; top: 15px; left: 40px; animation-duration: 16s; animation-delay: 1.5s; }
+.wrapper .seascape .bubble.b4 { top: 20%; left: 15%; }
+.wrapper .seascape .bubble.b4 > li { animation: bubble-b1 20s linear infinite; }
+.wrapper .seascape .bubble.b5 { top: 40%; left: 70%; }
+.wrapper .seascape .bubble.b5 > li { animation: bubble-b1 20s linear infinite; }
+.wrapper .seascape .bubble.b5 > li:nth-of-type(1) { width: 20px; height: 20px; top: 10px; left: 0; animation-delay: 2s; }
+.wrapper .seascape .bubble.b5 > li:nth-of-type(2) { width: 18px; height: 18px; top: 20px; left: 20px; animation-duration: 13s; animation-delay: .5s; }
+.wrapper .seascape .bubble.b5 > li:nth-of-type(3) { width: 10px; height: 10px; top: 0; left: 15px; animation-duration: 18s; animation-delay: 3.5s; }
+.wrapper .seascape .bubble.b5 > li:nth-of-type(4) { width: 15px; height: 15px; top: -20px; left: 30px; animation-duration: 23s; animation-delay: 1.5s; }
+.wrapper .seascape .bubble.b5 > li:nth-of-type(5) { width: 5px; height: 5px; top: 15px; left: 40px; animation-duration: 16s; }
+.wrapper .seascape .bubble > li { position: absolute; list-style: none; display: block; -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px white; -moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px white; box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px white; border-radius: 100%; opacity: 0; }
+.wrapper .seascape .bubble > li:nth-of-type(1) { width: 5px; height: 5px; top: 20px; left: 0; }
+.wrapper .seascape .bubble > li:nth-of-type(2) { width: 10px; height: 10px; top: 0; left: 20px; animation-duration: 13s; animation-delay: 2s; }
+.wrapper .seascape .bubble > li:nth-of-type(3) { width: 15px; height: 15px; top: 30px; left: 10px; animation-duration: 18s; animation-delay: 3.5s; }
+.wrapper .seascape .bubble > li:nth-of-type(4) { width: 18px; height: 18px; top: -30px; left: 0; animation-duration: 23s; animation-delay: 1.5s; }
+.wrapper .seascape .bubble > li:nth-of-type(5) { width: 20px; height: 20px; top: 15px; left: 40px; animation-duration: 16s; animation-delay: 2s; }
+.wrapper .seascape .bubble > li:nth-of-type(6) { width: 25px; height: 25px; left: 60%; animation-duration: 16s; animation-delay: 2s; }
+.wrapper .seascape .bubble > li:nth-of-type(7) { width: 30px; height: 30px; left: 70%; animation-duration: 16s; animation-delay: 2s; }
+@keyframes bubble-b1 { 0% { -webkit-transform: translateY(0) translateX(0); transform: translateY(0) translateX(0); opacity: .6; }
+  25% { -webkit-transform: translateY(0) translateX(10px); transform: translateY(-25px) translateX(10px); opacity: .4; }
+  50% { -webkit-transform: translateY(0) translateX(0px); transform: translateY(-50px) translateX(0px); opacity: .2; }
+  75% { -webkit-transform: translateY(0) translateX(-10px); transform: translateY(-75px) translateX(-10px); opacity: .1; }
+  100% { -webkit-transform: translateY(-100px) translateX(0); transform: translateY(-100px) translateX(0); opacity: 0; } }
+@keyframes bubble-ani2 { 0% { -webkit-transform: translateY(0); transform: translateY(0); }
+  100% { -webkit-transform: translateY(-220vh); transform: translateY(-220vh); } }
 .wrapper .side_nav { position: fixed; top: calc(50% - 200px / 2); right: 2rem; }
 .wrapper .side_nav ul { margin: 0; padding: 0; list-style: none; }
 .wrapper .side_nav ul > li { display: flex; justify-content: center; align-items: center; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; }
