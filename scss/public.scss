@@ -36,8 +36,12 @@ body {
 		left: calc(50% - 1320px / 2);
 		width: 100%;
 		max-width: 1320px;
+		z-index: 1;
 
-		// padding-top: 2rem;
+		@include range-width(769px, 1025px) {
+			max-width: 960px;
+			left: calc(50% - 960px / 2);
+		}
 
 		.logo {
 			display: flex;
@@ -45,19 +49,21 @@ body {
 		}
 
 		.menu {
-			width: 30%;
+			
 			ul {
 				display: flex;
-				justify-content: flex-end;
+				justify-content: space-between;
+				margin-bottom: 0;
 				padding-left: 0;
 				list-style: none;
 
-
 				li {
+
 					> a {
 						color: #56cde9;
 						text-decoration: none;
 					}
+
 				}
 			}
 		}
@@ -65,25 +71,6 @@ body {
 
 	.seascape {
 		position: relative;
-		// background-size: cover;
-		// background-repeat: no-repeat;
-		// width: 100vw;
-		// height: 100vh;
-
-		// &.bg_top {
-		// 	background-image: url(../img/bg01.jpg);
-		// 	background-position: bottom;
-		// }
-
-		// &.bg_mid {
-		// 	background-image: url(../img/bg02.jpg);
-		// 	background-position: bottom;
-		// }
-
-		// &.bg_bottom {
-		// 	background-image: url(../img/bg03.jpg);
-		// 	background-position:bottom;
-		// }
 
 		.ice {
 			> picture {
@@ -96,11 +83,43 @@ body {
 					height: 100vh;
 				}
 			}
-			&.ice_top {
-				// position: absolute;
-				// bottom: 0;
-			}
 		}
+		.ice-icon-items {
+			position: absolute;
+			top: 0;
+			// right: 0;
+			// bottom: 0;
+			// left: 0;
+			width: 100%;
+			height: 100%;
+
+			.ice-icon-item {
+				position: absolute;
+				top: 32%;
+				left: 46.5%;
+
+				&.fade_in {
+					opacity: 0;
+					animation-name: fade_in;
+					animation-duration: 2s;
+					animation-fill-mode: both;
+				}
+		
+				@keyframes fade_in {
+					form {
+						opacity: 0;
+					}
+		
+					to {
+						opacity: 1;
+					}
+		
+				}
+			}
+
+			
+		}
+		
 	}
 
 	.side_nav {
@@ -126,7 +145,7 @@ body {
 					margin: 25px 0;
 				}
 
-				&:hover {
+				&.active, &:hover {
 					border: 1px solid #cbecf1;
 
 					> a {
@@ -157,13 +176,19 @@ body {
 		}
 
 		&.submarine_up {
-			opacity: 0;
 			animation-name: submarine_up;
 			animation-duration: 2s;
 			animation-fill-mode: both;
 		}
 
-		@keyframes submarine_up {
+		&.submarine_in {
+			opacity: 0;
+			animation-name: submarine_in;
+			animation-duration: 2s;
+			animation-fill-mode: both;
+		}
+
+		@keyframes submarine_in {
 			form {
 				opacity: 0;
 			}
@@ -174,34 +199,36 @@ body {
 
 		}
 
-		@keyframes submarine_down {
-			25% {
-				transform: rotate(-20deg);
-
+		@keyframes submarine_up {
+			form {
+				transform: rotate(0);
+				opacity: 1;
 			}
 
 			50% {
-				transform: rotate(-30deg);
-				// transform: translateX(100px);
-				transform: translateY(100px);
+				transform: rotate(20deg);	
 			}
 
-			75% {
-				transform: rotate(-40deg);
-				transform: translateX(150px);
-				transform: translateY(150px);	
-			}
-
-			100% {
-				transform: rotate(-50deg);
-				transform: translateX(200px);
-				transform: translateY(200px);
+			to {
+				transform: translateX(-100px) translateY(-100px);
 				opacity: 0;
 			}
-
-
 		}
 
-		
+		@keyframes submarine_down {
+			form {
+				transform: rotate(0);
+				opacity: 1;
+			}
+
+			50% {
+				transform: rotate(-20deg);	
+			}
+
+			to {
+				transform: translateX(-100px) translateY(100px);
+				opacity: 0;
+			}
+		}		
 	}
 }
