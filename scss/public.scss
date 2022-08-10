@@ -128,10 +128,9 @@ body {
 			&.b1 {
 				top: 50%;
 				left: 10%;
-				
 
 				> li {
-					animation: bubble-b1 15s linear infinite;
+					animation: bubble-b1 10s linear infinite;
 
 					&:nth-of-type(1) {
 						width: 5px;
@@ -155,7 +154,7 @@ body {
 						height: 15px;
 						top: 30px;
 						left: 10px;
-						animation-duration: 18s;
+						animation-duration: 9s;
 						animation-delay: 3.5s;
 					}
 		
@@ -164,7 +163,7 @@ body {
 						height: 18px;
 						top: -30px;
 						left: 0;
-						animation-duration: 23s;
+						animation-duration: 4s;
 						animation-delay: 1.5s;
 					}
 		
@@ -173,7 +172,7 @@ body {
 						height: 20px;
 						top: 15px;
 						left: 40px;
-						animation-duration: 16s;
+						animation-duration: 8s;
 						animation-delay: 2s;
 					}
 				}
@@ -184,7 +183,7 @@ body {
 				left: 80%;
 
 				> li {
-					animation: bubble-b1 20s linear infinite;
+					animation: bubble-b1 12s linear infinite;
 
 					&:nth-of-type(1) {
 						width: 20px;
@@ -199,7 +198,7 @@ body {
 						height: 18px;
 						top: 20px;
 						left: 20px;
-						animation-duration: 13s;
+						animation-duration: 10s;
 						animation-delay: .5s;
 					}
 		
@@ -208,7 +207,7 @@ body {
 						height: 10px;
 						top: 0;
 						left: 15px;
-						animation-duration: 18s;
+						animation-duration: 8s;
 						animation-delay: 3.5s;
 					}
 		
@@ -217,7 +216,7 @@ body {
 						height: 15px;
 						top: -20px;
 						left: 30px;
-						animation-duration: 23s;
+						animation-duration: 15s;
 						animation-delay: 1.5s;
 					}
 		
@@ -226,7 +225,7 @@ body {
 						height: 5px;
 						top: 15px;
 						left: 40px;
-						animation-duration: 16s;
+						animation-duration: 7s;
 					}
 				}
 			}
@@ -251,7 +250,7 @@ body {
 						height: 15px;
 						top: 20px;
 						left: 20px;
-						animation-duration: 13s;
+						animation-duration: 11s;
 						animation-delay: 2s;
 					}
 		
@@ -260,7 +259,7 @@ body {
 						height: 5px;
 						top: 0;
 						left: 15px;
-						animation-duration: 18s;
+						animation-duration: 7s;
 						animation-delay: 1s;
 					}
 		
@@ -269,7 +268,7 @@ body {
 						height: 18px;
 						top: -20px;
 						left: 30px;
-						animation-duration: 23s;
+						animation-duration: 10s;
 					}
 		
 					&:nth-of-type(5) {
@@ -289,7 +288,7 @@ body {
 				left: 15%;
 
 				> li {
-					animation: bubble-b1 20s linear infinite;	
+					animation: bubble-b1 10s linear infinite;	
 				}
 			}
 
@@ -298,7 +297,7 @@ body {
 				left: 70%;
 
 				> li {
-					animation: bubble-b1 20s linear infinite;
+					animation: bubble-b1 13s linear infinite;
 
 					&:nth-of-type(1) {
 						width: 20px;
