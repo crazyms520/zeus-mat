@@ -95,8 +95,82 @@ body {
 
 			.ice-icon-item {
 				position: absolute;
-				top: 32%;
-				left: 46.5%;
+				
+
+				&.t1 {
+					top: 73%;
+					left: 13%;
+				}
+
+				&.t2 {
+					top: 66%;
+					left: 25%;
+				}
+				
+				&.t3 {
+					top: 32%;
+					left: 46.5%;
+				}
+
+				&.t4 {
+					top: 45%;
+					left: 65.5%;
+				}
+
+				&.t5 {
+					top: 65%;
+					left: 75%;
+				}
+
+				&.m1 {
+					top: 55%;
+					left: 30%;
+				}
+
+				&.m2 {
+					top: 24%;
+					left: 32%;
+				}
+				
+				&.m3 {
+					top: 83%;
+					left: 40%;
+				}
+
+				&.m4 {
+					top: 16%;
+					left: 55%;
+				}
+
+				&.m5 {
+					top: 72%;
+					left: 60%;
+				}
+
+				&.b1 {
+					top: 60%;
+					left: 15%;
+				}
+
+				&.b2 {
+					top: 70%;
+					left: 35%;
+				}
+				
+				&.b3 {
+					top: 31%;
+					left: 44.5%;
+				}
+
+				&.b4 {
+					top: 13%;
+					left: 52%;
+				}
+
+				&.b5 {
+					top: 68%;
+					left: 60%;
+				}
 
 				&.fade_in {
 					opacity: 0;

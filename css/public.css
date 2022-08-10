@@ -3104,7 +3104,22 @@ body::selection { color: white; background-color: #78baff; }
 .wrapper .seascape .ice > picture { display: inline-block; width: 100vw; height: 100vh; }
 .wrapper .seascape .ice > picture > img { width: 100vw; height: 100vh; }
 .wrapper .seascape .ice-icon-items { position: absolute; top: 0; width: 100%; height: 100%; }
-.wrapper .seascape .ice-icon-items .ice-icon-item { position: absolute; top: 32%; left: 46.5%; }
+.wrapper .seascape .ice-icon-items .ice-icon-item { position: absolute; }
+.wrapper .seascape .ice-icon-items .ice-icon-item.t1 { top: 73%; left: 13%; }
+.wrapper .seascape .ice-icon-items .ice-icon-item.t2 { top: 66%; left: 25%; }
+.wrapper .seascape .ice-icon-items .ice-icon-item.t3 { top: 32%; left: 46.5%; }
+.wrapper .seascape .ice-icon-items .ice-icon-item.t4 { top: 45%; left: 65.5%; }
+.wrapper .seascape .ice-icon-items .ice-icon-item.t5 { top: 65%; left: 75%; }
+.wrapper .seascape .ice-icon-items .ice-icon-item.m1 { top: 55%; left: 30%; }
+.wrapper .seascape .ice-icon-items .ice-icon-item.m2 { top: 24%; left: 32%; }
+.wrapper .seascape .ice-icon-items .ice-icon-item.m3 { top: 83%; left: 40%; }
+.wrapper .seascape .ice-icon-items .ice-icon-item.m4 { top: 16%; left: 55%; }
+.wrapper .seascape .ice-icon-items .ice-icon-item.m5 { top: 72%; left: 60%; }
+.wrapper .seascape .ice-icon-items .ice-icon-item.b1 { top: 60%; left: 15%; }
+.wrapper .seascape .ice-icon-items .ice-icon-item.b2 { top: 70%; left: 35%; }
+.wrapper .seascape .ice-icon-items .ice-icon-item.b3 { top: 31%; left: 44.5%; }
+.wrapper .seascape .ice-icon-items .ice-icon-item.b4 { top: 13%; left: 52%; }
+.wrapper .seascape .ice-icon-items .ice-icon-item.b5 { top: 68%; left: 60%; }
 .wrapper .seascape .ice-icon-items .ice-icon-item.fade_in { opacity: 0; animation-name: fade_in; animation-duration: 2s; animation-fill-mode: both; }
 @keyframes fade_in { form { opacity: 0; }
   to { opacity: 1; } }
