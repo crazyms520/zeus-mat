@@ -3096,7 +3096,7 @@ body::selection { color: white; background-color: #78baff; }
 
 .no_scroll { overflow: hidden; }
 
-.loading_page { position: fixed; top: 0; left: 0; bottom: 0; right: 0; width: 100vw; height: 100vh; z-index: 100; }
+.loading_page { position: fixed; top: 0; left: 0; bottom: 0; right: 0; width: 100vw; height: 100vh; z-index: 100; background-color: #5cb8d5; }
 .loading_page .loading_img { position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; }
 .loading_page .loading_img picture { display: inline-block; width: 100%; height: 100%; }
 .loading_page .loading_img picture img { width: 100%; height: 100%; }
