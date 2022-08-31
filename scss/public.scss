@@ -24,6 +24,161 @@ body {
     @include selection(rgba(120, 186, 255, 1), rgba(255, 255, 255, 1));
 }
 
+.no_scroll {
+	overflow: hidden;
+}
+
+.loading_page {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 100;
+
+	.loading_img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+
+
+		picture {
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+	.content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+
+		.logo {
+			position: relative;
+		}
+
+		.loading {
+			margin-top: 2rem; 
+			$colors: #7ef9ff, #89cff0, #4682b4, #0f52ba, #000080;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			@include range-width(0, 451px) {
+				flex-direction: column;
+			}
+
+			.dots {
+				display: flex;
+
+				.dot {
+					position: relative;
+					width: 1.5rem;
+					height: 1.5rem;
+					margin: 0.8em;
+					border-radius: 50%;
+				
+					&::before {
+					  position: absolute;
+					  left: 0;
+					  content: "";
+					  width: 100%;
+					  height: 100%;
+					  background: inherit;
+					  border-radius: inherit;
+					  animation: wave 2s ease-out infinite;
+					}
+				
+					@for $i from 1 through 5 {
+					  &:nth-child(#{$i}) {
+						background: nth($colors, $i);
+				
+						&::before {
+						  animation-delay: $i * 0.2s;
+						}
+					  }
+					}
+				}
+	  
+				@keyframes wave {
+					50%,
+					75% {
+					transform: scale(2);
+					}
+				
+					80%,
+					100% {
+					opacity: 0;
+					}
+				}
+			}
+			
+			.submarine {
+				position: relative;
+				margin: 0 0 1rem 1rem;
+				opacity: 0;
+				animation: name duration timing-function delay iteration-count direction fill-mode;
+				animation: show 1s ease-out 2s 1 normal forwards;
+				
+				@include range-width(0, 451px) {
+					margin: 1rem 0 0 0;
+				}
+				
+				picture {
+					display: inline-block;
+					width: 120px;
+
+					img {
+						width: 100%;
+						transform: rotateY(180deg);
+					}
+				}
+
+				@keyframes show {
+					0% {
+						opacity: 0;
+					}
+				
+					100% {
+						opacity: 1;
+					}
+				}
+			}
+		}
+
+		.copy {
+			position: absolute;
+			bottom: 2rem;
+			
+			p {
+				font-size: 12px;
+				color: white;
+
+				span {
+					@include range-width(0, 451px) {
+						display: block;
+					}
+				}
+			}
+		}
+		  
+		 
+	}
+}
+
 .wrapper {
 	position: relative;
 	
@@ -41,6 +196,11 @@ body {
 		@include range-width(769px, 1025px) {
 			max-width: 960px;
 			left: calc(50% - 960px / 2);
+		}
+
+		@include range-width(0, 769px) {
+			top: 1rem;
+			left: 1rem;
 		}
 
 		.logo {
@@ -79,11 +239,13 @@ body {
 				height: 100vh;
 
 				> img {
+					display: inline-block;
 					width: 100vw;
 					height: 100vh;
 				}
 			}
 		}
+
 		.ice-icon-items {
 			position: absolute;
 			top: 0;
@@ -95,81 +257,20 @@ body {
 
 			.ice-icon-item {
 				position: absolute;
-				
+				width: 60px;
+				height: 90px;
+				cursor: pointer;
 
-				&.t1 {
-					top: 73%;
-					left: 13%;
-				}
-
-				&.t2 {
-					top: 66%;
-					left: 25%;
-				}
-				
-				&.t3 {
-					top: 32%;
-					left: 46.5%;
+				@include range-width(0, 451px) {
+					width: 40px;
+					height: 70px;
 				}
 
-				&.t4 {
-					top: 45%;
-					left: 65.5%;
-				}
-
-				&.t5 {
-					top: 65%;
-					left: 75%;
-				}
-
-				&.m1 {
-					top: 55%;
-					left: 30%;
-				}
-
-				&.m2 {
-					top: 24%;
-					left: 32%;
-				}
-				
-				&.m3 {
-					top: 83%;
-					left: 40%;
-				}
-
-				&.m4 {
-					top: 16%;
-					left: 55%;
-				}
-
-				&.m5 {
-					top: 72%;
-					left: 60%;
-				}
-
-				&.b1 {
-					top: 60%;
-					left: 15%;
-				}
-
-				&.b2 {
-					top: 70%;
-					left: 35%;
-				}
-				
-				&.b3 {
-					top: 31%;
-					left: 44.5%;
-				}
-
-				&.b4 {
-					top: 13%;
-					left: 52%;
-				}
-
-				&.b5 {
-					top: 68%;
-					left: 60%;
+				&:hover {
+					.pop_content, .pop_arrow {
+						opacity: 1;
+						// pointer-events: initial;
+					}
 				}
 
 				&.fade_in {
@@ -177,6 +278,64 @@ body {
 					animation-name: fade_in;
 					animation-duration: 2s;
 					animation-fill-mode: both;
+				}
+				.pop_content {
+					/* Invisible by default */
+					opacity: 0;
+
+					/* To prevent accidental interactions with other elements  */
+					pointer-events: none;
+
+					/* Background color, must be the same as the border color of arrow */
+					background-color: rgba(60, 102, 251, 1.00);
+					border-radius: 5px;
+					color: white;
+					width: auto;
+					white-space: nowrap;
+					padding: 15px 30px;
+
+					/* Position */
+					bottom: 110%;
+					left: 100%;
+					position: absolute;
+					transform: translate(-50%, -8px);
+
+					/* Displayed on top of other element */
+					z-index: 10;
+
+					@include range-width(0, 451px) {
+						opacity: 1;
+						padding: 5px 15px;
+						bottom: calc(50% - 17px);
+						left: 100%;
+						transform: translate(0, -8px);
+						z-index: -1;
+						border-radius: 2px;
+					}
+				}
+				.pop_arrow {
+					/* Invisible by default */
+					opacity: 0;
+
+					/* To prevent accidental interactions with other elements  */
+					pointer-events: none;
+
+					/* Border */
+					border: 8px solid transparent;
+					border-top-color: rgba(60, 102, 251, 1.00);
+
+					/* Position */
+					bottom: 110%;
+					left: 100%;
+					position: absolute;
+					transform: translate(-50%, 8px);
+
+					/* Zero size */
+					height: 0;
+					width: 0;
+
+					/* Displayed on top of other element */
+					z-index: 10;    
 				}
 		
 				@keyframes fade_in {
@@ -193,11 +352,46 @@ body {
 
 			
 		}
+
+		.ice-up, .ice-down {
+			display: none;
+			@include range-width(0, 769px) {
+				position: absolute;
+				width: 100vw;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+
+				&.ice-up {
+					top: 5%;
+				}
+
+				&.ice-down {
+					bottom: 5%;
+				}
+			
+				figure {
+					margin: 0;
+
+					img {
+						width: 50px;
+						height: 50px;
+					} 
+
+					figcaption {
+						margin-top: .5rem;
+						color: white;
+					}
+				}
+			}
+			
+		}
 		
 		.bubble {
 			position: absolute;
 			top: 0;
 			left: 0;
+			z-index: 1;
 
 			&.b1 {
 				top: 50%;
@@ -536,12 +730,166 @@ body {
 				}
 			}
 		}
+
+		.fishes {
+			position: absolute;
+			transform: scale(.6) rotate(180deg);
+			opacity: .4;
+			animation: swim 20s;
+			-webkit-animation: swim 20s;
+			animation-iteration-count: infinite;
+			-webkit-animation-iteration-count: infinite;
+			animation-timing-function: linear;
+			-webkit-animation-timing-function: linear;
+
+			@include range-width(0, 769px) {
+				display: none;
+			}
+
+			&.f1 {
+				top: 45%;
+				left: 5%;
+			}
+
+			&.f2 {
+				top: 60%;
+				left: 75%;
+				animation-duration: 18s;
+				-webkit-animation-duration: 18s;
+			}
+
+			&.f3 {
+				top: 15%;
+				left: 10%;
+				opacity: 1;
+				animation-duration: 15s;
+				-webkit-animation-duration: 15s;
+			}
+
+			&.f4 {
+				top: 30%;
+				left: 65%;
+				opacity: 1;
+				animation-duration: 20s;
+				-webkit-animation-duration: 20s;
+			}
+
+			@-webkit-keyframes swim
+			{
+				// 0% {margin-left: -235px}
+				0% {margin-left: 0px; opacity: .4;}
+				90% {margin-left: -4%; opacity: .4;}
+				100% {margin-left: -5%; opacity: 0;}
+				
+			}
+
+			@keyframes swim
+			{
+				0% {margin-left: 0px; opacity: .4;}
+				90% {margin-left: -4%; opacity: .4;}
+				100% {margin-left: -5%; opacity: 0;}
+			}
+
+			svg .fish1,
+			svg .fish2,
+			svg .fish3,
+			svg .fish4,
+			svg .fish5,
+			svg .fish6 {
+				// fill: rgba(107, 194, 236, 1.00) !important;
+				-moz-animation: bounce 2s infinite;
+				-webkit-animation: bounce 2s infinite;
+				animation: bounce 2s infinite;
+				// z-index: 0;
+			}
+
+			svg .fish2{
+				animation-delay: 0.5s;
+				-webkit-animation-delay: 0.5s;
+			}
+			
+			svg .fish3{
+				animation-delay: 0.2s;
+				-webkit-animation-delay: 0.2s;
+			}
+			
+			svg .fish4{
+				animation-delay: 0.4s;
+				-webkit-animation-delay: 0.4s;
+			}
+			
+			svg .fish5{
+				animation-delay: 0.1s;
+				-webkit-animation-delay: 0.1s;
+			}
+			
+			svg .fish6{
+				animation-delay: 0.3s;
+				-webkit-animation-delay: 0.3s;
+			}
+
+			@-moz-keyframes bounce {
+				0%, 50%, 100% {
+				  -moz-transform: translateY(0);
+				  transform: translateY(0);
+				}
+				25% {
+				  -moz-transform: translateY(-5px);
+				  transform: translateY(-5px);
+				}
+				75% {
+				  -moz-transform: translateY(-3px);
+				  transform: translateY(-3px);
+				}
+			  }
+			  @-webkit-keyframes bounce {
+				0%, 50%, 100% {
+				  -webkit-transform: translateY(0);
+				  transform: translateY(0);
+				}
+				25% {
+				  -webkit-transform: translateY(-5px);
+				  transform: translateY(-5px);
+				}
+
+				75% {
+				  -webkit-transform: translateY(-3px);
+				  transform: translateY(-3px);
+				}
+			  }
+			  @keyframes bounce {
+				0%, 50%, 100% {
+				  -moz-transform: translateY(0);
+				  -ms-transform: translateY(0);
+				  -webkit-transform: translateY(0);
+				  transform: translateY(0);
+				}
+				25% {
+				  -moz-transform: translateY(-5px);
+				  -ms-transform: translateY(-5px);
+				  -webkit-transform: translateY(-5px);
+				  transform: translateY(-5px);
+				}
+				75% {
+				  -moz-transform: translateY(-3px);
+				  -ms-transform: translateY(-3px);
+				  -webkit-transform: translateY(-3px);
+				  transform: translateY(-3px);
+				}
+			  }
+			  
+			  /*END Fish Animation*/
+		}
 	}
 
 	.side_nav {
 		position: fixed;
 		top: calc(50% - 200px / 2);
 		right: 2rem;
+
+		@include range-width(0, 451px) {
+			display: none;
+		}
 
 		ul {
 			margin: 0;
@@ -584,6 +932,16 @@ body {
 		position: fixed;
 		right: 10%;
 		bottom: 11%;
+
+		@include range-width(0, 451px) {
+			bottom: 25%;
+			width: 120px;
+			height: 41px;
+
+			img {
+				width: 100%;
+			}
+		}
 
 		&.submarine_down {
 			animation-name: submarine_down;
