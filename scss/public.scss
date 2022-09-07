@@ -4,9 +4,9 @@ html {
 	scroll-behavior: smooth;
 	overflow-x: hidden;
 
-	@include range-width(0, 451px) {
-		overflow-y: hidden;
-	}
+	// @include range-width(0, 451px) {
+	// 	overflow-y: hidden;
+	// }
 }
 
 body {
