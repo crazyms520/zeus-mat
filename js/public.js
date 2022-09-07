@@ -1,5 +1,9 @@
 
 $(function() {
+	document.body.addEventListener('touchmove', function(e){ 
+		// document.getElementsByTagName('body')[0]. style .height = "100vh";
+		document.getElementsByTagName('html')[0]. style. overflow = "hidden";
+	});
 	// check img is complete loading
 	function imageLoaded() {
 		counter--; 
