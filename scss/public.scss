@@ -3,6 +3,10 @@
 html {
 	scroll-behavior: smooth;
 	overflow-x: hidden;
+
+	@include range-width(0, 451px) {
+		overflow: hidden;
+	}
 }
 
 body {
@@ -557,7 +561,7 @@ body {
 
 			&.b4 {
 				top: 20%;
-				left: 15%;
+				left: 10%;
 
 				> li {
 					animation: bubble-b1 10s linear infinite;	
@@ -565,8 +569,8 @@ body {
 			}
 
 			&.b5 {
-				top: 40%;
-				left: 70%;
+				top: 10%;
+				left: 90%;
 
 				> li {
 					animation: bubble-b1 13s linear infinite;
@@ -614,6 +618,58 @@ body {
 						animation-duration: 16s;
 					}
 				}
+			}
+
+			&.b6 {
+				top: 90%;
+				left: 2%;
+
+				> li {
+					animation: bubble-b1 12s linear infinite;
+
+					&:nth-of-type(1) {
+						width: 20px;
+						height: 20px;
+						top: 10px;
+						left: 0;
+						animation-delay: 2s;
+					}
+		
+					&:nth-of-type(2) {
+						width: 18px;
+						height: 18px;
+						top: 20px;
+						left: 20px;
+						animation-duration: 10s;
+						animation-delay: .5s;
+					}
+		
+					&:nth-of-type(3) {
+						width: 10px;
+						height: 10px;
+						top: 0;
+						left: 15px;
+						animation-duration: 8s;
+						animation-delay: 3.5s;
+					}
+		
+					&:nth-of-type(4) {
+						width: 15px;
+						height: 15px;
+						top: -20px;
+						left: 30px;
+						animation-duration: 15s;
+						animation-delay: 1.5s;
+					}
+		
+					&:nth-of-type(5) {
+						width: 5px;
+						height: 5px;
+						top: 15px;
+						left: 40px;
+						animation-duration: 7s;
+					}
+				}	
 			}
 
 			> li {
@@ -737,7 +793,7 @@ body {
 
 		.fishes {
 			position: absolute;
-			transform: scale(.6) rotate(180deg);
+			transform: scale(.7) rotate(180deg);
 			opacity: .4;
 			animation: swim 20s;
 			-webkit-animation: swim 20s;
@@ -750,9 +806,19 @@ body {
 				display: none;
 			}
 
+			&.to_right {
+				transform: scale(.7);	
+				animation: swim2 20s;
+				-webkit-animation: swim2 20s;
+				animation-iteration-count: infinite;
+				-webkit-animation-iteration-count: infinite;
+				animation-timing-function: linear;
+				-webkit-animation-timing-function: linear;
+			}
+
 			&.f1 {
-				top: 45%;
-				left: 5%;
+				top: 25%;
+				left: 3%;
 			}
 
 			&.f2 {
@@ -764,18 +830,48 @@ body {
 
 			&.f3 {
 				top: 15%;
+				left: 80%;
+				animation-duration: 12s;
+				-webkit-animation-duration: 12s;
+			}
+
+			&.f4 {
+				top: 80%;
+				left: 10%;
+				animation-duration: 15s;
+				-webkit-animation-duration: 15s;
+			}
+
+			&.f5 {
+				top: 15%;
 				left: 10%;
 				opacity: 1;
 				animation-duration: 15s;
 				-webkit-animation-duration: 15s;
 			}
 
-			&.f4 {
+			&.f6 {
 				top: 30%;
 				left: 65%;
 				opacity: 1;
 				animation-duration: 20s;
 				-webkit-animation-duration: 20s;
+			}
+
+			&.f7 {
+				top: 80%;
+				left: 45%;
+				opacity: 1;
+				animation-duration: 10s;
+				-webkit-animation-duration: 10s;
+			}
+
+			&.f8 {
+				top: 40%;
+				left: 25%;
+				opacity: 1;
+				animation-duration: 13s;
+				-webkit-animation-duration: 13s;
 			}
 
 			@-webkit-keyframes swim
@@ -792,6 +888,21 @@ body {
 				0% {margin-left: 0px; opacity: .4;}
 				90% {margin-left: -4%; opacity: .4;}
 				100% {margin-left: -5%; opacity: 0;}
+			}
+
+			@-webkit-keyframes swim2
+			{
+				0% {margin-left: 0px; opacity: .4;}
+				90% {margin-left: 4%; opacity: .4;}
+				100% {margin-left: 5%; opacity: 0;}
+				
+			}
+
+			@keyframes swim2
+			{
+				0% {margin-left: 0px; opacity: .4;}
+				90% {margin-left: 4%; opacity: .4;}
+				100% {margin-left: 5%; opacity: 0;}
 			}
 
 			svg .fish1,
