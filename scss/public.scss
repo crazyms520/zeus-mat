@@ -186,7 +186,9 @@ body {
 
 .wrapper {
 	position: relative;
-	
+	@include range-width(0, 451px) {
+		overflow-x: hidden;
+	}
 	.header {
 		display: flex;
 		justify-content: space-between;

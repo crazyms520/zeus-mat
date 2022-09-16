@@ -7,7 +7,6 @@ $(function() {
 
 	// document.body.addEventListener('touchstart', function(e){ e.preventDefault(); });
 	// document.body.addEventListener('touchmove', function(e){ e.preventDefault(); }); 
-	$("html, body").on("touchmove", false);
 	
 	// check img is complete loading
 	function imageLoaded() {
