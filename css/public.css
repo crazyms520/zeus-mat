@@ -3154,7 +3154,7 @@ body::selection { color: white; background-color: #78baff; }
 .wrapper .seascape .ice-up, .wrapper .seascape .ice-down { display: none; }
 @media screen and (max-width: 768px) and (min-width: 0) { .wrapper .seascape .ice-up, .wrapper .seascape .ice-down { position: absolute; width: 100vw; display: flex; flex-direction: column; justify-content: center; }
   .wrapper .seascape .ice-up.ice-up, .wrapper .seascape .ice-down.ice-up { top: 5%; }
-  .wrapper .seascape .ice-up.ice-down, .wrapper .seascape .ice-down.ice-down { bottom: 10%; }
+  .wrapper .seascape .ice-up.ice-down, .wrapper .seascape .ice-down.ice-down { bottom: 7%; }
   .wrapper .seascape .ice-up figure, .wrapper .seascape .ice-down figure { margin: 0; }
   .wrapper .seascape .ice-up figure img, .wrapper .seascape .ice-down figure img { width: 50px; height: 50px; }
   .wrapper .seascape .ice-up figure figcaption, .wrapper .seascape .ice-down figure figcaption { margin-top: .5rem; color: white; } }
@@ -3258,7 +3258,7 @@ body::selection { color: white; background-color: #78baff; }
 .wrapper .side_nav ul > li.active > a, .wrapper .side_nav ul > li:hover > a { width: 10px; height: 10px; }
 .wrapper .side_nav ul > li > a { width: 5px; height: 5px; border-radius: 50%; background-color: #1875b6; }
 .wrapper .submarine { position: fixed; right: 10%; bottom: 11%; }
-@media screen and (max-width: 450px) and (min-width: 0) { .wrapper .submarine { bottom: 25%; width: 120px; height: 41px; }
+@media screen and (max-width: 450px) and (min-width: 0) { .wrapper .submarine { bottom: 16%; width: 120px; height: 41px; }
   .wrapper .submarine img { width: 100%; } }
 .wrapper .submarine.submarine_down { animation-name: submarine_down; animation-duration: 2s; animation-fill-mode: both; }
 .wrapper .submarine.submarine_up { animation-name: submarine_up; animation-duration: 2s; animation-fill-mode: both; }

@@ -375,7 +375,7 @@ body {
 				}
 
 				&.ice-down {
-					bottom: 10%;
+					bottom: 7%;
 				}
 			
 				figure {
@@ -1049,7 +1049,7 @@ body {
 		bottom: 11%;
 
 		@include range-width(0, 451px) {
-			bottom: 25%;
+			bottom: 16%;
 			width: 120px;
 			height: 41px;
 
