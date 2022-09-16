@@ -188,6 +188,7 @@ body {
 	position: relative;
 	@include range-width(0, 451px) {
 		overflow-x: hidden;
+		overflow-y: hidden;
 	}
 	.header {
 		display: flex;

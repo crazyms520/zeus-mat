@@ -3132,7 +3132,7 @@ body::selection { color: white; background-color: #78baff; }
 @media screen and (max-width: 450px) and (min-width: 0) { .loading_page .content .copy p span { display: block; } }
 
 .wrapper { position: relative; }
-@media screen and (max-width: 450px) and (min-width: 0) { .wrapper { overflow-x: hidden; } }
+@media screen and (max-width: 450px) and (min-width: 0) { .wrapper { overflow-x: hidden; overflow-y: hidden; } }
 .wrapper .header { display: flex; justify-content: space-between; align-items: center; position: absolute; top: 2rem; left: calc(50% - 1320px / 2); width: 100%; max-width: 1320px; z-index: 1; }
 @media screen and (max-width: 1024px) and (min-width: 769px) { .wrapper .header { max-width: 960px; left: calc(50% - 960px / 2); } }
 @media screen and (max-width: 768px) and (min-width: 0) { .wrapper .header { top: 0; left: 0; margin: 1rem 0 0 1rem; width: calc(100% - 1rem); } }
