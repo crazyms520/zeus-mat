@@ -3153,8 +3153,8 @@ body::selection { color: white; background-color: #78baff; }
   to { opacity: 1; } }
 .wrapper .seascape .ice-up, .wrapper .seascape .ice-down { display: none; }
 @media screen and (max-width: 768px) and (min-width: 0) { .wrapper .seascape .ice-up, .wrapper .seascape .ice-down { position: absolute; width: 100vw; display: flex; flex-direction: column; justify-content: center; }
-  .wrapper .seascape .ice-up.ice-up, .wrapper .seascape .ice-down.ice-up { top: 5%; }
-  .wrapper .seascape .ice-up.ice-down, .wrapper .seascape .ice-down.ice-down { bottom: 5%; }
+  .wrapper .seascape .ice-up.ice-up, .wrapper .seascape .ice-down.ice-up { top: 10%; }
+  .wrapper .seascape .ice-up.ice-down, .wrapper .seascape .ice-down.ice-down { bottom: 10%; }
   .wrapper .seascape .ice-up figure, .wrapper .seascape .ice-down figure { margin: 0; }
   .wrapper .seascape .ice-up figure img, .wrapper .seascape .ice-down figure img { width: 50px; height: 50px; }
   .wrapper .seascape .ice-up figure figcaption, .wrapper .seascape .ice-down figure figcaption { margin-top: .5rem; color: white; } }
