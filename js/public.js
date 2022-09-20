@@ -1,12 +1,5 @@
 
 $(function() {
-	// document.body.addEventListener('touchstart', function(e){ 
-	// 	document.getElementsByTagName('body')[0]. style .height = "100vh";
-	// 	document.getElementsByTagName('html')[0]. style. overflow = "hidden";
-	// });
-	document.body.addEventListener('touchstart', function(e){ e.preventDefault(); });
-	// document.body.addEventListener('touchstart', function(e){ e.preventDefault(); });
-	// document.body.addEventListener('touchmove', function(e){ e.preventDefault(); }); 
 	
 	// check img is complete loading
 	function imageLoaded() {

@@ -3102,6 +3102,8 @@ body::selection { color: white; background-color: #78baff; }
 .loading_page .loading_img picture img { width: 100%; height: 100%; }
 .loading_page .content { display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; height: 100%; }
 .loading_page .content .logo { position: relative; }
+.loading_page .content .logo img { width: 100%; }
+@media screen and (max-width: 450px) and (min-width: 0) { .loading_page .content .logo img { width: 100%; } }
 .loading_page .content .loading { margin-top: 2rem; display: flex; justify-content: center; align-items: center; }
 @media screen and (max-width: 450px) and (min-width: 0) { .loading_page .content .loading { flex-direction: column; } }
 .loading_page .content .loading .dots { display: flex; }
@@ -3131,15 +3133,17 @@ body::selection { color: white; background-color: #78baff; }
 .loading_page .content .copy p { font-size: 12px; color: white; }
 @media screen and (max-width: 450px) and (min-width: 0) { .loading_page .content .copy p span { display: block; } }
 
-.wrapper { position: relative; }
-@media screen and (max-width: 450px) and (min-width: 0) { .wrapper { overflow-x: hidden; overflow-y: hidden; } }
+.wrapper { position: relative; background-image: url(../img/bg-all.png); background-size: cover; background-repeat: no-repeat; }
+@media screen and (max-width: 450px) and (min-width: 0) { .wrapper { background-image: url(../img/m-bg-all.png); overflow-x: hidden; overflow-y: hidden; } }
 .wrapper .header { display: flex; justify-content: space-between; align-items: center; position: absolute; top: 2rem; left: calc(50% - 1320px / 2); width: 100%; max-width: 1320px; z-index: 1; }
 @media screen and (max-width: 1024px) and (min-width: 769px) { .wrapper .header { max-width: 960px; left: calc(50% - 960px / 2); } }
 @media screen and (max-width: 768px) and (min-width: 0) { .wrapper .header { top: 0; left: 0; margin: 1rem 0 0 1rem; width: calc(100% - 1rem); } }
 .wrapper .header .logo { display: flex; justify-content: flex-start; }
+.wrapper .header .logo img { width: 30%; }
+@media screen and (max-width: 450px) and (min-width: 0) { .wrapper .header .logo img { width: 100%; } }
 .wrapper .header .menu ul { display: flex; justify-content: space-between; margin-bottom: 0; padding-left: 0; list-style: none; }
 .wrapper .header .menu ul li > a { color: #56cde9; text-decoration: none; }
-.wrapper .seascape { position: relative; }
+.wrapper .seascape { position: relative; height: 100vh; }
 .wrapper .seascape .ice > picture { display: inline-block; width: 100vw; height: 100vh; }
 .wrapper .seascape .ice > picture > img { display: inline-block; width: 100vw; height: 100vh; }
 .wrapper .seascape .ice-icon-items { position: absolute; top: 0; width: 100%; height: 100%; }
@@ -3258,9 +3262,11 @@ body::selection { color: white; background-color: #78baff; }
 .wrapper .side_nav ul > li.active, .wrapper .side_nav ul > li:hover { border: 1px solid #cbecf1; }
 .wrapper .side_nav ul > li.active > a, .wrapper .side_nav ul > li:hover > a { width: 10px; height: 10px; }
 .wrapper .side_nav ul > li > a { width: 5px; height: 5px; border-radius: 50%; background-color: #1875b6; }
-.wrapper .submarine { position: fixed; right: 10%; bottom: 11%; }
-@media screen and (max-width: 450px) and (min-width: 0) { .wrapper .submarine { bottom: 16%; width: 120px; height: 41px; }
-  .wrapper .submarine img { width: 100%; } }
+.wrapper .submarine { position: fixed; right: 10%; bottom: 3%; }
+@media screen and (max-width: 1440px) and (min-width: 1200px) { .wrapper .submarine { bottom: 2%; } }
+@media screen and (max-width: 450px) and (min-width: 0) { .wrapper .submarine { bottom: 16%; width: 120px; height: 41px; } }
+.wrapper .submarine img { width: 60%; }
+@media screen and (max-width: 450px) and (min-width: 0) { .wrapper .submarine img { width: 100%; } }
 .wrapper .submarine.submarine_down { animation-name: submarine_down; animation-duration: 2s; animation-fill-mode: both; }
 .wrapper .submarine.submarine_up { animation-name: submarine_up; animation-duration: 2s; animation-fill-mode: both; }
 .wrapper .submarine.submarine_in { opacity: 0; animation-name: submarine_in; animation-duration: 2s; animation-fill-mode: both; }

@@ -73,6 +73,14 @@ body {
 
 		.logo {
 			position: relative;
+
+			img {
+				width: 100%;
+
+				@include range-width(0, 451px) {
+					width: 100%;
+				}
+			}
 		}
 
 		.loading {
@@ -186,7 +194,13 @@ body {
 
 .wrapper {
 	position: relative;
+	background-image: url(../img/bg-all.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	
+	
 	@include range-width(0, 451px) {
+		background-image: url(../img/m-bg-all.png);
 		overflow-x: hidden;
 		overflow-y: hidden;
 	}
@@ -216,6 +230,14 @@ body {
 		.logo {
 			display: flex;
 			justify-content: flex-start;
+
+			img {
+				width: 30%;
+
+				@include range-width(0, 451px) {
+					width: 100%;
+				}
+			}
 		}
 
 		.menu {
@@ -241,6 +263,7 @@ body {
 
 	.seascape {
 		position: relative;
+		height: 100vh;
 
 		.ice {
 			> picture {
@@ -1049,15 +1072,23 @@ body {
 	.submarine {
 		position: fixed;
 		right: 10%;
-		bottom: 11%;
+		bottom: 3%;
+
+		@include range-width(1200px, 1441px) {
+			bottom: 2%;
+		}
 
 		@include range-width(0, 451px) {
 			bottom: 16%;
 			width: 120px;
 			height: 41px;
+		}
 
-			img {
-				width: 100%;
+		img {
+			width: 60%;
+
+			@include range-width(0, 451px) {
+				width: 100%;	
 			}
 		}
 
