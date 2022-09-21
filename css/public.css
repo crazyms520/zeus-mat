@@ -3284,7 +3284,7 @@ body::selection { color: white; background-color: #78baff; }
 .wrapper .submarine { position: fixed; right: 5%; bottom: 10vh; }
 @media screen and (max-width: 1600px) and (min-width: 1441px) { .wrapper .submarine { bottom: 15vh; } }
 @media screen and (max-width: 1440px) and (min-width: 1025px) { .wrapper .submarine { bottom: 15vh; } }
-@media screen and (max-width: 450px) and (min-width: 0) { .wrapper .submarine { right: 5%; bottom: 20vh; width: 120px; height: 41px; } }
+@media screen and (max-width: 450px) and (min-width: 0) { .wrapper .submarine { right: 5%; bottom: 10vh; width: 120px; height: 41px; } }
 .wrapper .submarine img { width: 60%; }
 @media screen and (max-width: 450px) and (min-width: 0) { .wrapper .submarine img { width: 100%; } }
 .wrapper .submarine.submarine_down { animation-name: submarine_down; animation-duration: 2s; animation-fill-mode: both; }

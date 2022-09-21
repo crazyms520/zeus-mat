@@ -105,7 +105,7 @@ $(function() {
 		if($(window).scrollTop() >= $('#section-1').height()) {
 			$('.submarine').css({"bottom": "50%"});
 		} else {
-			$('.submarine').css({"bottom": "100px"});	
+			$('.submarine').css({"bottom": "10vh"});	
 		}
 	})
 });
