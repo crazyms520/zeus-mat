@@ -98,5 +98,14 @@ $(function() {
 			});
 		})
 		
+	})	
+	
+	$(window).on('scroll', function() {
+			
+		if($(window).scrollTop() >= $('#section-1').height()) {
+			$('.submarine').css({"bottom": "50%"});
+		} else {
+			$('.submarine').css({"bottom": "100px"});	
+		}
 	})
 });
