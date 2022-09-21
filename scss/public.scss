@@ -705,7 +705,7 @@ body {
 			}
 
 			&.b6 {
-				top: 90%;
+				top: 80%;
 				left: 2%;
 
 				> li {
@@ -1089,12 +1089,21 @@ body {
 		background-color: rgba(3, 19, 35, 1.00);
 		width: 100%;
 		padding: 1rem 5rem;
-		
+
+		@include range-width(0, 451px) {
+			flex-direction: column;
+			padding: 1rem;
+		}
+
 		ul {
 			display: flex;
 			list-style: none;
 			margin: 0;
 			padding: 0;
+
+			@include range-width(0, 451px) {
+				justify-content: center;
+			}
 
 			li {
 
@@ -1110,12 +1119,18 @@ body {
 					text-decoration: none;
 					color: #fff;
 
+					@include range-width(0, 451px) {
+						font-size: 14px;
+					}
+
 					&:after {
 						content: '|';
 						display: inline-block;
 						padding: 0 1rem;
 
-						
+						@include range-width(0, 451px) {
+							padding: .3rem;
+						}
 					}
 				}
 			}
@@ -1124,6 +1139,11 @@ body {
 		.copy {
 			color: #fff;
 			text-align: right;
+
+			@include range-width(0, 451px) {
+				font-size: 14px;
+				text-align: center;
+			}
 		}
 	}
 

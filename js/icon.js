@@ -18,9 +18,9 @@ const iconItems2 = {
 const iconItems3 = {
 	icon1 : {'top': 60, 'left': 15, 'mTop': 21, 'mLeft': 11, 'url': 'img/icon01.svg', 'hover_url': 'img/icon01_hover.svg', 'title': '雞首or牛後', 'link': '#0'},
 	icon2 : {'top': 70, 'left': 35, 'mTop': 35, 'mLeft': 27, 'url': 'img/icon02.svg', 'hover_url': 'img/icon02_hover.svg', 'title': '隨拉隨選自由比', 'link': '#0'},
-	icon3 : {'top': 31, 'left': 44, 'mTop': 65, 'mLeft': 40, 'url': 'img/icon03.svg', 'hover_url': 'img/icon03_hover.svg', 'title': '', 'link': '#0'},
-	icon4 : {'top': 13, 'left': 52, 'mTop': 75, 'mLeft': 12, 'url': 'img/icon04.svg', 'hover_url': 'img/icon04_hover.svg', 'title': '', 'link': '#0'},
-	icon5 : {'top': 68, 'left': 60, 'mTop': 85, 'mLeft': 35, 'url': 'img/icon05.svg', 'hover_url': 'img/icon05_hover.svg', 'title': '', 'link': '#0'},
+	icon3 : {'top': 31, 'left': 44, 'mTop': 50, 'mLeft': 40, 'url': 'img/icon03.svg', 'hover_url': 'img/icon03_hover.svg', 'title': '', 'link': '#0'},
+	icon4 : {'top': 13, 'left': 52, 'mTop': 65, 'mLeft': 12, 'url': 'img/icon04.svg', 'hover_url': 'img/icon04_hover.svg', 'title': '', 'link': '#0'},
+	icon5 : {'top': 68, 'left': 60, 'mTop': 75, 'mLeft': 35, 'url': 'img/icon05.svg', 'hover_url': 'img/icon05_hover.svg', 'title': '', 'link': '#0'},
 }
 
 function setIcon(target) {
