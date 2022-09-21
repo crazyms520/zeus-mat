@@ -3133,7 +3133,13 @@ body::selection { color: white; background-color: #78baff; }
 .loading_page .content .copy p { font-size: 12px; color: white; }
 @media screen and (max-width: 450px) and (min-width: 0) { .loading_page .content .copy p span { display: block; } }
 
-.wrapper { position: relative; background-image: url(../img/bg-all.png); background-size: cover; background-repeat: no-repeat; }
+.wrapper { position: relative; background-image: url(../img/bg-all.png); background-size: cover; background-repeat: no-repeat; background-position: center center; background-position-y: -450px; }
+@media screen and (max-width: 2400px) and (min-width: 2241px) { .wrapper { background-position-y: -400px; } }
+@media screen and (max-width: 2240px) and (min-width: 2081px) { .wrapper { background-position-y: -350px; } }
+@media screen and (max-width: 2080px) and (min-width: 1921px) { .wrapper { background-position-y: -300px; } }
+@media screen and (max-width: 1920px) and (min-width: 1761px) { .wrapper { background-position-y: -200px; } }
+@media screen and (max-width: 1760px) and (min-width: 1601px) { .wrapper { background-position-y: -100px; } }
+@media screen and (max-width: 1600px) and (min-width: 1441px) { .wrapper { background-position-y: 0; } }
 @media screen and (max-width: 1440px) and (min-width: 1025px) { .wrapper { background-image: url(../img/bg-all.png); background-position-y: 0; } }
 @media screen and (max-width: 450px) and (min-width: 0) { .wrapper { background-image: url(../img/m-bg-all.png); background-position-y: 0; overflow-x: hidden; overflow-y: hidden; } }
 .wrapper .header { display: flex; justify-content: space-between; align-items: center; position: absolute; top: 2rem; left: calc(50% - 1320px / 2); width: 100%; max-width: 1320px; z-index: 1; }

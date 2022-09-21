@@ -195,32 +195,42 @@ body {
 .wrapper {
 	position: relative;
 	background-image: url(../img/bg-all.png);
-	// background-image: url(../img/bg-all.jpeg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	// background-position-y: -500px;
+	background-position: center center;
+	background-position-y: -450px;
 
-	// @include range-width(1741px, 1841px) {
-	// 	background-position-y: -200px;
-	// }	
+	@include range-width(2241px, 2401px) {
+		background-position-y: -400px;
+	}	
 
-	// @include range-width(1541px, 1741px) {
-	// 	background-position-y: -100px;
-	// }	
+	@include range-width(2081px, 2241px) {
+		background-position-y: -350px;
+	}	
 
-	// @include range-width(1441px, 1541px) {
-	// 	background-position-y: 0;
-	// }	
+	@include range-width(1921px, 2081px) {
+		background-position-y: -300px;
+	}	
+
+	@include range-width(1761px, 1921px) {
+		background-position-y: -200px;
+	}	
+
+	@include range-width(1601px, 1761px) {
+		background-position-y: -100px;
+	}	
+
+	@include range-width(1441px, 1601px) {
+		background-position-y: 0;
+	}	
 
 	@include range-width(1025px, 1441px) {
 		background-image: url(../img/bg-all.png);	
-		// background-position: top;
 		background-position-y: 0;
 	}
 
 	@include range-width(0, 451px) {
 		background-image: url(../img/m-bg-all.png);
-		// background-position: top;
 		background-position-y: 0;
 		overflow-x: hidden;
 		overflow-y: hidden;
