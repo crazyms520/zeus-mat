@@ -194,16 +194,26 @@ body {
 
 .wrapper {
 	position: relative;
-	background-image: url(../img/bg-all.png);
+	// background-image: url(../img/bg-background.jpg);
+	background-image: url(../img/bg-all.jpeg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	
-	
+	background-position-y: -500px;
+
+	@include range-width(1025px, 1441px) {
+		background-image: url(../img/bg-all.png);	
+		// background-position: top;
+		background-position-y: 0;
+	}
+
 	@include range-width(0, 451px) {
 		background-image: url(../img/m-bg-all.png);
+		// background-position: top;
+		background-position-y: 0;
 		overflow-x: hidden;
 		overflow-y: hidden;
 	}
+
 	.header {
 		display: flex;
 		justify-content: space-between;
