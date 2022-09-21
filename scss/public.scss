@@ -194,11 +194,23 @@ body {
 
 .wrapper {
 	position: relative;
-	// background-image: url(../img/bg-background.jpg);
-	background-image: url(../img/bg-all.jpeg);
+	background-image: url(../img/bg-all.png);
+	// background-image: url(../img/bg-all.jpeg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position-y: -500px;
+	// background-position-y: -500px;
+
+	// @include range-width(1741px, 1841px) {
+	// 	background-position-y: -200px;
+	// }	
+
+	// @include range-width(1541px, 1741px) {
+	// 	background-position-y: -100px;
+	// }	
+
+	// @include range-width(1441px, 1541px) {
+	// 	background-position-y: 0;
+	// }	
 
 	@include range-width(1025px, 1441px) {
 		background-image: url(../img/bg-all.png);	
