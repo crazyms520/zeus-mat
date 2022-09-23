@@ -42,7 +42,7 @@ $(function() {
 		let target = $(this).find('a').attr('href');
 		let old = $('.side_nav').find('.active').children().attr('data-id');
 		let now = $(this).children().attr('data-id');
-
+		console.log(old, now);
 			// 執行(下潛)動畫
 		if( $('html').scrollTop() != $(target).offset().top) {
 			$('.ice-icon-items').empty();
@@ -62,7 +62,6 @@ $(function() {
 				scrollTop: $(target).offset().top
 			}, function() {
 				$('.submarine').delay(500).queue(function(){
-					console.log('public');
 					setIcon(now);
 					$(this).addClass('submarine_in').dequeue();
 				});
@@ -80,7 +79,6 @@ $(function() {
 		$('.ice-icon-items').empty();
 			
 		// animation start
-		console.log(direction);
 		$(".submarine").removeClass('submarine_up submarine_down submarine_in')
 			if(direction === 'up'){
 				$(".submarine").addClass('submarine_up')

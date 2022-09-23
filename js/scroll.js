@@ -5,7 +5,6 @@ $(function() {
 			$('.side_nav').find('.nav-item').removeClass('active');
 			$('.side_nav').find('a[href="#section-1"]').parent().addClass('active');
 			if($('#section-1').find('.ice-icon-item').length == 0) {
-				console.log('at 1');
 				setIcon('1');	
 			}
 		}
@@ -14,7 +13,6 @@ $(function() {
 			$('.side_nav').find('.nav-item').removeClass('active');
 			$('.side_nav').find('a[href="#section-2"]').parent().addClass('active');	
 			if($('#section-2').find('.ice-icon-item').length == 0) {
-				console.log('at 2');
 				setIcon('2');	
 			}
 		}
@@ -23,7 +21,6 @@ $(function() {
 			$('.side_nav').find('.nav-item').removeClass('active');
 			$('.side_nav').find('a[href="#section-3"]').parent().addClass('active');
 			if($('#section-3').find('.ice-icon-item').length == 0) {
-				console.log('at 3');
 				setIcon('3');	
 			}
 		}

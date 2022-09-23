@@ -24,7 +24,6 @@ const iconItems3 = {
 }
 
 function setIcon(target) {
-	console.log(target);
 	let position = $('#section-'+target).find('.ice-icon-items');
 
 	let items;
