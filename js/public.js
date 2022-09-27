@@ -101,7 +101,8 @@ $(function() {
 	$(window).on('scroll', function() {
 			
 		if($(window).scrollTop() >= $('#section-1').height()) {
-			$('.submarine').css({"bottom": "50%"});
+			// 22.5px = 潛艇高度的一半
+			$('.submarine').css({"bottom": "calc(50vh - 22.5px)"});
 		} else {
 			$('.submarine').css({"bottom": "10vh"});	
 		}
