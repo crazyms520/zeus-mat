@@ -42,7 +42,6 @@ $(function() {
 		let target = $(this).find('a').attr('href');
 		let old = $('.side_nav').find('.active').children().attr('data-id');
 		let now = $(this).children().attr('data-id');
-		console.log(old, now);
 			// 執行(下潛)動畫
 		if( $('html').scrollTop() != $(target).offset().top) {
 			$('.ice-icon-items').empty();
@@ -107,4 +106,62 @@ $(function() {
 			$('.submarine').css({"bottom": "10vh"});	
 		}
 	})
+
+	const move = {
+		$scrollElement: null,
+		timer: null,
+		ranges: [],
+		setScrollElement ($scrollElement) {
+		  this.$scrollElement = $scrollElement
+		  return this
+		},
+		setAreas ($section) {
+		  let areas = $section.map(function() {
+			return {
+			  top: $(this).offset().top,
+			  height: $(this).outerHeight(),
+			}
+		  }).toArray()
+	
+		  let ranges = []
+		  let last = null
+		  for (let area of areas) {
+			console.log(area.height)
+			last = last === null
+			  ? { start: -1, end: (area.height / 3 * 2), top: 0 }
+			  : { start: last.end, end: area.top + (area.height / 3 * 2), top: area.top }
+			ranges.push(last)
+		  }
+		  this.ranges = ranges
+		  return this
+		},
+		getRange (top) {
+		  for (let range of this.ranges) {
+			console.log(range)
+			if (top > range.start && top <= range.end)
+				return range
+			}
+		  return null
+		  
+		},
+		goto (top, delay = 500) {
+		  if (this.$scrollElement === null) return 
+		  let range = this.getRange(top)
+		  console.log(range);
+		  if (range === null) return 
+		  clearTimeout(this.timer)
+		  this.timer = setTimeout(_ => this.$scrollElement.animate({ scrollTop: range.top }), delay)
+		}
+	  }
+	
+	move
+		.setScrollElement($('html'))
+		.setAreas($('.seascape'))
+	
+	let $window = $(window)
+	
+	$window.scroll(_ => {
+		move.goto($window.scrollTop())
+	}).scroll()
 });
+

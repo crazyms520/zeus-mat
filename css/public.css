@@ -3141,7 +3141,7 @@ body::selection { color: white; background-color: #78baff; }
 @media screen and (max-width: 1920px) and (min-width: 1761px) { .wrapper { background-position-y: -100px; } }
 @media screen and (max-width: 1760px) and (min-width: 1601px) { .wrapper { background-position-y: -100px; } }
 @media screen and (max-width: 1600px) and (min-width: 1441px) { .wrapper { background-position-y: -100px; } }
-@media screen and (max-width: 1440px) and (min-width: 1281px) { .wrapper { background-position-y: -100px; } }
+@media screen and (max-width: 1440px) and (min-width: 1281px) { .wrapper { background-position-y: -100px; background-position-y: 0; } }
 @media screen and (max-width: 1280px) and (min-width: 1025px) { .wrapper { background-position-y: 0; } }
 @media screen and (max-width: 1024px) and (min-width: 451px) { .wrapper { background-position-y: 0; } }
 @media screen and (max-width: 450px) and (min-width: 0) { .wrapper { background-image: url(../img/m-bg-all.png); background-position-y: 0; overflow-x: hidden; overflow-y: hidden; } }

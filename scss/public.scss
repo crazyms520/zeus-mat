@@ -226,6 +226,7 @@ body {
 
 	@include range-width(1281px, 1441px) {
 		background-position-y: -100px;
+		background-position-y: 0;
 	}
 
 	@include range-width(1025px, 1281px) {
